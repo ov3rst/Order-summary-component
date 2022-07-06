@@ -1,0 +1,179 @@
+:root {
+  /* Primary */
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Bright-blue-active: hsl(245, 69%, 66%);
+
+  /* Secondary */
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Font */
+  --Font: "Red Hat Display", sans-serif;
+}
+
+/** Reset **/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: var(--Font);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--Dark-blue);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/** Summary Card **/
+.summary-card {
+  background-color: var(--White);
+  width: 315px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.summary-details {
+  padding: 1.5rem 2rem;
+  color: var(--Desaturated-blue);
+}
+
+.summary-plan {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.summary-plan svg {
+  flex-basis: 4.8rem;
+}
+
+.summary-plan-price {
+  text-align: start;
+  font-size: 15px;
+  line-height: 1.3rem;
+}
+
+.summary-plan-price span:first-of-type {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.summary-plan a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.summary-plan a:hover {
+  text-decoration: none;
+  color: var(--Bright-blue-active);
+}
+
+.summary-btns {
+  padding: 0 1.5rem;
+}
+
+.summary-btns a {
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.summary-btns a:first-of-type {
+  background-color: var(--Bright-blue);
+  border-radius: 0.7rem;
+  color: var(--White);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 1rem 0;
+}
+
+.summary-btns a:first-of-type:hover {
+  background-color: var(--Bright-blue-active);
+}
+
+.summary-btns a:last-of-type {
+  padding: 1.5rem 1rem 1.7rem;
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.summary-btns a:last-of-type:hover {
+  color: var(--Dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    /* background-size: auto; */
+  }
+
+  .summary-card {
+    width: 375px;
+  }
+
+  .summary-details {
+    padding: 2rem 3rem;
+  }
+
+  .summary-plan {
+    gap: 0.5rem;
+  }
+
+  .summary-btns {
+    padding: 0 2.3rem;
+  }
+
+  .summary-btns a:first-of-type {
+    padding: 0.8rem;
+  }
+}
